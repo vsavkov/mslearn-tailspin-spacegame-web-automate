@@ -5,8 +5,13 @@ terraform {
   }
 }
 
+provider "azurerm" {
+  version = ">= 2.0.0"
+  features {}
+}
+
 variable "resource_group_name" {
-  default = "tailspin-space-game-rg"
+  default = "tf-tailspin-space-game-rg"
   description = "The name of the resource group"
 }
 
@@ -15,7 +20,7 @@ variable "resource_group_location" {
 }
 
 variable "app_service_plan_name" {
-  default = "tailspin-space-game-asp"
+  default = "tf-tailspin-space-game-asp"
   description = "The name of the app service plan"
 }
 
